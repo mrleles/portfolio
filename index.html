@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A portfolio website showcasing projects and skills of a fullstack developer.">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+            &#9776;
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#about-me">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#latest-news">News</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main">
+        <section aria-labelledby="about-me">
+            <h2 id="about-me">About Me</h2>
+            <p>A fullstack developer.</p>
+        </section>
+        <section aria-labelledby="skills">
+            <h2 id="skills">Skills</h2>
+            <ul class="skills-list">
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Version Control (Git)</li>
+            </ul>
+        </section>
+        <section aria-labelledby="projects" class="projects-section">
+            <h2 id="projects" class="section-title">Projects</h2>
+            <div class="projects-list">
+                <article class="project-card">
+                    <figure class="project-figure">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" alt="Project 1 screenshot" class="project-image">
+                        <figcaption class="project-caption">Project One</figcaption>
+                    </figure>
+                    <h3 class="project-title">Project One</h3>
+                    <p class="project-description">A brief description of Project One. This project demonstrates my skills in frontend development.</p>
+                </article>
+                <article class="project-card">
+                    <figure class="project-figure">
+                        <img src="https://via.placeholder.com/150" alt="Project 2 screenshot" class="project-image">
+                        <figcaption class="project-caption">Project Two</figcaption>
+                    </figure>
+                    <h3 class="project-title">Project Two</h3>
+                    <p class="project-description">A brief description of Project Two. This project showcases my experience with backend technologies.</p>
+                </article>
+                <article class="project-card">
+                    <figure class="project-figure">
+                        <img src="https://via.placeholder.com/150" alt="Project 3 screenshot" class="project-image">
+                        <figcaption class="project-caption">Project Three</figcaption>
+                    </figure>
+                    <h3 class="project-title">Project Three</h3>
+                    <p class="project-description">A brief description of Project Three. This project highlights my ability to build fullstack applications.</p>
+                </article>
+            </div>
+        </section>
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <form action="#" method="post" role="form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        <article aria-labelledby="latest-news">
+            <h2 id="latest-news">Latest News</h2>
+            <p>This is an example article section you can update with your own content.</p>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Simple HTML Page</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

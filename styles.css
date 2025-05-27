@@ -1,0 +1,317 @@
+/* Matrix Movie Theme - WCAG Contrast Compliant */
+html {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', 'Liberation Sans', 'Courier New', Courier, monospace, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    background: #0f0f0f;
+    color: #00ff41;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Links */
+a {
+    color: #00ff41;
+    text-decoration: underline;
+}
+a:hover, a:focus {
+    color: #b6ff00;
+    background: #222;
+    outline: 2px solid #00ff41;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #00ff41;
+    text-shadow: 0 0 8px #00ff41, 0 0 2px #003300;
+    letter-spacing: 2px;
+}
+
+/* Code blocks */
+code, pre {
+    background: #1a1a1a;
+    color: #39ff14;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+}
+
+/* Seleção */
+::selection {
+    background: #00ff41;
+    color: #0f0f0f;
+}
+
+/* Matrix rain (não usada, pode remover se quiser) */
+.matrix-rain {
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff41;
+    text-shadow: 0 0 10px #00ff41, 0 0 2px #003300;
+    letter-spacing: 2px;
+    animation: rain 1.5s infinite linear alternate;
+}
+@keyframes rain {
+    0% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #181818;
+    padding: 1rem 0;
+    border-bottom: 2px solid #00ff41;
+}
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    color: #00ff41;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+nav a:hover, nav a:focus {
+    background: #222;
+    color: #b6ff00;
+    outline: 2px solid #00ff41;
+}
+
+/* Botão do menu hambúrguer */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #00ff41;
+    font-size: 2rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background: #181818;
+        position: absolute;
+        top: 4.5rem;
+        right: 2rem;
+        min-width: 160px;
+        border: 2px solid #00ff41;
+        border-radius: 8px;
+        padding: 1rem;
+        z-index: 1000;
+    }
+    nav ul.open {
+        display: flex;
+    }
+}
+
+/* Seção de projetos */
+.projects-section {
+    margin: 2rem 0;
+}
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    padding: 2rem 0;
+    overflow-x: auto;
+}
+.project-card {
+    background: #181818;
+    border: 2px solid #00ff41;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px 0 #00330099;
+    color: #00ff41;
+    padding: 2rem 1.5rem;
+    width: 320px;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s;
+    flex: 0 0 320px;
+}
+.project-card:hover, .project-card:focus-within {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 32px 0 #00ff4199;
+    border-color: #b6ff00;
+}
+.project-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #b6ff00;
+    text-shadow: 0 0 8px #00ff41, 0 0 2px #003300;
+}
+.project-card p {
+    margin: 0 0 1rem 0;
+    color: #aaffcc;
+}
+.project-card a {
+    align-self: flex-end;
+    color: #00ff41;
+    background: #222;
+    padding: 0.4em 1em;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+.project-card a:hover, .project-card a:focus {
+    background: #00ff41;
+    color: #0f0f0f;
+    outline: 2px solid #b6ff00;
+}
+
+/* Skills list with icons */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+.skills-list li {
+    position: relative;
+    padding-left: 2em;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+.skills-list li::before {
+    content: "💻";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+    line-height: 1;
+}
+.skills-list li:nth-child(1)::before {
+    content: "🟨"; /* JavaScript */
+}
+.skills-list li:nth-child(2)::before {
+    content: "🐍"; /* Python */
+}
+.skills-list li:nth-child(3)::before {
+    content: "🔗"; /* Git */
+}
+
+/* Imagens e vídeos responsivos */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Flexbox vendor prefixes para os principais containers */
+.projects-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    align-items: stretch;
+    padding: 2rem 0;
+    overflow-x: auto;
+    gap: 2rem;
+}
+
+.project-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 320px;
+    max-width: 90vw;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 320px;
+    flex: 0 0 320px;
+    background: #181818;
+    border: 2px solid #00ff41;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px 0 #00330099;
+    color: #00ff41;
+    padding: 2rem 1.5rem;
+    -webkit-transition: -webkit-transform 0.2s, box-shadow 0.2s;
+    -moz-transition: transform 0.2s, box-shadow 0.2s;
+    -o-transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Responsividade para projetos e skills */
+@media (max-width: 900px) {
+    .projects-list {
+        gap: 1rem;
+    }
+    .project-card {
+        width: 260px;
+        max-width: 90vw;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 260px;
+        flex: 0 0 260px;
+        padding: 1.2rem 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .projects-list {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1rem 0;
+    }
+    .project-card {
+        width: 95vw;
+        max-width: 98vw;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+        padding: 1rem 0.5rem;
+    }
+    .skills-list li {
+        font-size: 1em;
+        padding-left: 1.5em;
+    }
+    body {
+        font-size: 16px;
+    }
+    main {
+        padding: 0 0.5rem;
+    }
+}
