@@ -61,7 +61,9 @@ code, pre {
     100% { opacity: 0.3; }
 }
 
-/* Navegação */
+/* =========================
+   NAVIGATION
+   ========================= */
 nav {
     display: flex;
     justify-content: center;
@@ -127,7 +129,9 @@ nav a:hover, nav a:focus {
     }
 }
 
-/* Seção de projetos */
+/* =========================
+   PROJECTS SECTION
+   ========================= */
 .projects-section {
     margin: 2rem 0;
 }
@@ -266,7 +270,138 @@ video {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Responsividade para projetos e skills */
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 15, 15, 0.95);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.lightbox.open {
+    display: flex;
+}
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border: 4px solid #00ff41;
+    border-radius: 10px;
+    box-shadow: 0 0 32px #00ff4199;
+    background: #181818;
+}
+.lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    color: #00ff41;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2100;
+    text-shadow: 0 0 8px #00ff41;
+    transition: color 0.2s;
+}
+.lightbox-close:hover,
+.lightbox-close:focus {
+    color: #b6ff00;
+}
+
+.field-error {
+    color: #ff3333;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 2px #000;
+}
+
+/* =========================
+   FILTER BUTTONS
+   ========================= */
+.projects-filter {
+    margin-bottom: 1.5rem;
+}
+button {
+    background: #181818;
+    color: #00ff41;
+    border: 2px solid #00ff41;
+    border-radius: 6px;
+    padding: 0.5em 1.2em;
+    margin-right: 0.5em;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px #00330099;
+    transition:
+        background 0.2s,
+        color 0.2s,
+        border-color 0.2s,
+        box-shadow 0.2s,
+        transform 0.15s;
+}
+button:last-child {
+    margin-right: 0;
+}
+button:hover,
+button:focus {
+    background: #00ff41;
+    color: #0f0f0f;
+    border-color: #b6ff00;
+    box-shadow: 0 0 16px #00ff41, 0 0 4px #003300;
+    outline: 2px solid #b6ff00;
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* =========================
+   FORM MATRIX THEME
+   ========================= */
+input[type="text"],
+input[type="email"],
+textarea {
+    background: #181818;
+    color: #00ff41;
+    border: 2px solid #00ff41;
+    border-radius: 6px;
+    padding: 0.6em 1em;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 8px #00330099;
+    transition: 
+        background 0.2s,
+        color 0.2s,
+        border-color 0.2s,
+        box-shadow 0.2s;
+    outline: none;
+    width: 60%; /* Reduzido para 60% da largura original */
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    background: #222;
+    color: #b6ff00;
+    border-color: #b6ff00;
+    box-shadow: 0 0 16px #00ff41, 0 0 4px #003300;
+}
+
+label {
+    color: #b6ff00;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 0.3em;
+    display: block;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
 @media (max-width: 900px) {
     .projects-list {
         gap: 1rem;

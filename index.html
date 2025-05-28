@@ -16,7 +16,8 @@
         <nav>
             <ul>
                 <li><a href="#about-me">About</a></li>
-                <li><a href="#features">Features</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><a href="#latest-news">News</a></li>
             </ul>
         </nav>
@@ -36,8 +37,15 @@
         </section>
         <section aria-labelledby="projects" class="projects-section">
             <h2 id="projects" class="section-title">Projects</h2>
+            <!-- Botões de filtro -->
+            <div class="projects-filter">
+                <button type="button" class="filter-button" onclick="filterProjects('all')">All</button>
+                <button type="button" onclick="filterProjects('frontend')">Frontend</button>
+                <button type="button" onclick="filterProjects('backend')">Backend</button>
+                <button type="button" onclick="filterProjects('fullstack')">Fullstack</button>
+            </div>
             <div class="projects-list">
-                <article class="project-card">
+                <article class="project-card" data-category="frontend">
                     <figure class="project-figure">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" alt="Project 1 screenshot" class="project-image">
                         <figcaption class="project-caption">Project One</figcaption>
@@ -45,7 +53,7 @@
                     <h3 class="project-title">Project One</h3>
                     <p class="project-description">A brief description of Project One. This project demonstrates my skills in frontend development.</p>
                 </article>
-                <article class="project-card">
+                <article class="project-card" data-category="backend">
                     <figure class="project-figure">
                         <img src="https://via.placeholder.com/150" alt="Project 2 screenshot" class="project-image">
                         <figcaption class="project-caption">Project Two</figcaption>
@@ -53,7 +61,7 @@
                     <h3 class="project-title">Project Two</h3>
                     <p class="project-description">A brief description of Project Two. This project showcases my experience with backend technologies.</p>
                 </article>
-                <article class="project-card">
+                <article class="project-card" data-category="fullstack">
                     <figure class="project-figure">
                         <img src="https://via.placeholder.com/150" alt="Project 3 screenshot" class="project-image">
                         <figcaption class="project-caption">Project Three</figcaption>
@@ -87,8 +95,13 @@
         </article>
     </main>
     <footer>
-        <p>&copy; 2023 My Simple HTML Page</p>
+        <p>&copy; 2025 My Simple HTML Page</p>
     </footer>
-    <script src="scripts.js"></script>
+    <!-- Lightbox container -->
+    <div id="lightbox" class="lightbox" tabindex="-1" aria-modal="true" role="dialog" style="display:none;">
+        <span class="lightbox-close" aria-label="Close">&times;</span>
+        <img class="lightbox-img" src="" alt="Project image enlarged">
+    </div>
+<script src="scripts.js"></script>
 </body>
 </html>
