@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = contactForm.querySelector('#email');
         const message = contactForm.querySelector('#message');
 
-        // Função para mostrar feedback
         function showFieldError(field, message) {
             let error = field.parentElement.querySelector('.field-error');
             if (!error) {
@@ -48,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (error) error.remove();
         }
 
-        // Validação em tempo real
         [name, email, message].forEach(field => {
             field.addEventListener('input', function () {
                 if (!field.value.trim()) {
@@ -75,8 +73,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 valid = false;
             }
 
-            if (!valid) {
-                e.preventDefault();
+            e.preventDefault(); // Sempre previne o envio real
+
+            if (valid) {
+                alert('Mensagem enviada com sucesso! (Simulação)');
+                contactForm.reset();
+                [name, email, message].forEach(clearFieldError);
             }
         });
     }
